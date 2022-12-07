@@ -30,18 +30,18 @@ class Board:
         global a
 
         if difficulty == "easy":
-            self.board = generate_sudoku(9, 10)
-            og_board = generate_sudoku(9, 10)
+            self.board = generate_sudoku(9, 30)
+            og_board = generate_sudoku(9, 30)
             a = copy.deepcopy(og_board)
 
         elif difficulty == "medium":
-            self.board = generate_sudoku(9, 20)
-            og_board = generate_sudoku(9, 20)
+            self.board = generate_sudoku(9, 40)
+            og_board = generate_sudoku(9, 40)
             a = copy.deepcopy(og_board)
 
         else:
-            self.board = generate_sudoku(9, 30)
-            og_board = generate_sudoku(9, 30)
+            self.board = generate_sudoku(9, 50)
+            og_board = generate_sudoku(9, 50)
             a = copy.deepcopy(og_board)
 
         # self.cells uses a nested for loop to create a 2D array of cells which contain the respective values in board
