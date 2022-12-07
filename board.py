@@ -36,11 +36,14 @@ class Board:
         elif difficulty == "medium":
             self.board = generate_sudoku(9, 40)
             og_board = generate_sudoku(9, 40)
+            a = copy.deepcopy(og_board)
+
 
         else:
             self.board = generate_sudoku(9, 50)
             og_board = generate_sudoku(9, 50)
-        
+            a = copy.deepcopy(og_board)
+    
 
         # self.cells uses a nested for loop to create a 2D array of cells which contain the respective values in board
         self.cells = [[Cell(self.board[i][j], i, j, self.screen) for j in range(9)] for i in range(9)]
